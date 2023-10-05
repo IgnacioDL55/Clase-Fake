@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "8a3f2866-444f-4cd2-bbe5-58e14c2a46b5",
+		"name": "Clase-Fake",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26655082"
+	},
+	"item": [
+		{
+			"name": "Get-All-Poducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create-Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Libro 2\",\r\n    \"price\": 3200.50,\r\n    \"description\": \"Descripción del Libro 2\",\r\n    \"category\": \"Libros\",\r\n    \"image\": \"imagen2.jpg\",\r\n    \"rating\": {\r\n        \"rate\": 4.25,\r\n        \"count\": 75\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-one-Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Precio-mayor-0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/mayor0?precioMinimo=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"mayor0"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Precio-entre-0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/entre0?precioMinimo=150&precioMaximo=4000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"entre0"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "150"
+						},
+						{
+							"key": "precioMaximo",
+							"value": "4000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Precio-entre-1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/entre1?precioMinimo=150&precioMaximo=4000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"entre1"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "150"
+						},
+						{
+							"key": "precioMaximo",
+							"value": "4000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Precio-mayor-1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/mayor1?precioMinimo=3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"mayor1"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "3000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-one-Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-one-Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Libro 2\",\r\n    \"price\": 3500.50,\r\n    \"description\": \"Descripción del Libro 2\",\r\n    \"category\": \"Libros\",\r\n    \"image\": \"imagen2.jpg\",\r\n    \"rating\": {\r\n        \"rate\": 4.25,\r\n        \"count\": 75\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
